@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Firebase Project</string>
+    <string name="gender_default">Gender: ???</string>
+    <string name="name_default">Name: ???</string>
+    <string name="age_default">Age: ???</string>
+    <string name="hobbies_default">Hobbies: ???</string>
+    <string name="gender_with_blank">Gender: %1$s</string>
+    <string name="name_with_blank">Name: %1$s</string>
+    <string name="age_with_blank">Age: %1$s</string>
+    <string name="hobbies_with_blank">Hobbies: %1$s</string>
+    <string name="image_desc">The Profile Image</string>
+    <string name="image_url">Image URL</string>
+    <string name="male">Male</string>
+    <string name="filter">Filter:</string>
+    <string name="female">Female</string>
+    <string name="age">Age</string>
+    <string name="name">Name</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="reset">Reset</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name = "invalid_input">All Fields must be filled!</string>
+    <string name="delete_profile">Delete Profile</string>
+    <string name="edit_hobbies">Edit Hobbies</string>
+    <string name="hobbies_edit_header">Hobbies:</string>
+    <string name="delete_confirmation_text">Are you sure you want to delete this profile?</string>
+    <string name="delete">Delete</string>
+</resources>

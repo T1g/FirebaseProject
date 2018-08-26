@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileListActivity">
+
+    <RelativeLayout
+        android:id="@+id/filter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/filter_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/filter"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/male_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filter_header"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:checked="true"
+            android:text="@string/male" />
+
+        <CheckBox
+            android:id="@+id/female_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/male_filter"
+            android:layout_alignLeft="@id/male_filter"
+            android:checked="true"
+            android:text="@string/female"
+            android:layout_alignStart="@id/male_filter" />
+
+        <RadioGroup
+            android:id="@+id/name_or_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/filter_header"
+            android:layout_toEndOf="@id/female_filter"
+            android:layout_toRightOf="@id/female_filter">
+
+            <RadioButton
+                android:id="@+id/sort_by_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name" />
+
+            <RadioButton
+                android:id="@+id/sort_by_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/ascend_or_descend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filter_header"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/name_or_age"
+            android:layout_toRightOf="@id/name_or_age"
+            android:checkedButton="@id/ascending">
+
+            <RadioButton
+                android:id="@+id/ascending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ascending" />
+
+            <RadioButton
+                android:id="@+id/descending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/descending" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/reset_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/ascend_or_descend"
+            android:layout_below="@id/filter_header"
+            android:text="@string/reset"
+            android:layout_toEndOf="@+id/ascend_or_descend" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profiles_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_toolbar">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/new_profile_fab"
+        android:layout_width="81dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
+        app:srcCompat="@mipmap/round_add_white_18dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true" />
+
+    <include layout="@layout/new_profile"
+        android:id="@+id/new_profile_overlay"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
