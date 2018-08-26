@@ -39,6 +39,7 @@ public class ProfileCardAdapter extends RecyclerView.Adapter<ProfileCardAdapter.
         viewHolder.genderView.setText(context.getResources().getString(R.string.gender_with_blank, profile.getGender()));
         viewHolder.ageView.setText(context.getResources().getString(R.string.age_with_blank, profile.getAge()));
         viewHolder.hobbiesView.setText(context.getResources().getString(R.string.hobbies_with_blank, profile.getHobbies()));
+        viewHolder.idView.setText(context.getResources().getString(R.string.id_with_blank, profile.getId()));
 
         Picasso.get().load(profile.getImage()).into(viewHolder.imageView);
 
@@ -82,6 +83,7 @@ public class ProfileCardAdapter extends RecyclerView.Adapter<ProfileCardAdapter.
         TextView ageView;
         TextView hobbiesView;
         ImageView imageView;
+        TextView idView;
 
         ProfileCardViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -90,7 +92,7 @@ public class ProfileCardAdapter extends RecyclerView.Adapter<ProfileCardAdapter.
             ageView = itemView.findViewById(R.id.age);
             hobbiesView = itemView.findViewById(R.id.hobbies);
             imageView = itemView.findViewById(R.id.image);
-
+            idView = itemView.findViewById(R.id.profile_id);
         }
 
 

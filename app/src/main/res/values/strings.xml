@@ -8,6 +8,7 @@
     <string name="name_with_blank">Name: %1$s</string>
     <string name="age_with_blank">Age: %1$s</string>
     <string name="hobbies_with_blank">Hobbies: %1$s</string>
+    <string name="id_with_blank">ID: %1$s</string>
     <string name="image_desc">The Profile Image</string>
     <string name="image_url">Image URL</string>
     <string name="male">Male</string>
@@ -27,4 +28,5 @@
     <string name="hobbies_edit_header">Hobbies:</string>
     <string name="delete_confirmation_text">Are you sure you want to delete this profile?</string>
     <string name="delete">Delete</string>
+    <string name="id_default">ID: ??????</string>
 </resources>

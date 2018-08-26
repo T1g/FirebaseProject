@@ -119,7 +119,7 @@ public class ProfileInput extends RelativeLayout {
         String hobbies = hobbiesInput.getText().toString();
         String image = imageInput.getText().toString();
 
-        String id = RandomStringUtils.randomAlphanumeric(6);
+        String id = RandomStringUtils.randomNumeric(8);
 
         return new Profile(id, name, gender, age, hobbies, image);
     }
